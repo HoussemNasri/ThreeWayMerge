@@ -1,0 +1,11 @@
+.unchanged {
+
+}
+
+.addition {
+    -rtfx-background-color: rgba(35, 225, 96, 0.37);
+}
+
+.deletion {
+    -rtfx-background-color: rgba(248, 62, 68, 0.32);
+}
