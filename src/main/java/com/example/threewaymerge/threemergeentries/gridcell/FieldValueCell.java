@@ -12,7 +12,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Ellipse;
 
-import com.example.threewaymerge.FieldCell;
 import org.fxmisc.richtext.StyleClassedTextArea;
 import org.kordamp.ikonli.fontawesome5.FontAwesomeSolid;
 import org.kordamp.ikonli.javafx.FontIcon;
@@ -82,7 +81,7 @@ public class FieldValueCell extends AbstractFieldCell {
     private BooleanProperty selected = new BooleanPropertyBase() {
         @Override
         public Object getBean() {
-            return FieldCell.class;
+            return FieldValueCell.class;
         }
 
         @Override

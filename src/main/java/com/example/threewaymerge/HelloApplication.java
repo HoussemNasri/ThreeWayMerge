@@ -147,7 +147,6 @@ public class HelloApplication extends Application {
         );
 
 
-
         HBox mergeDialogToolbar = new HBox();
         mergeDialogToolbar.setStyle("-fx-background-color: #d3d3d3");
         mergeDialogToolbar.setPrefHeight(36);
@@ -156,8 +155,6 @@ public class HelloApplication extends Application {
 
         VBox mergeDialogContent = new VBox();
         mergeDialogContent.getChildren().addAll(mergeDialogToolbar, headerContainer, scrollPane);
-
-
 
         Dialog<Void> mergeDialog = new Dialog<>();
         mergeDialog.setResizable(true);
@@ -174,15 +171,7 @@ public class HelloApplication extends Application {
 
         root.getChildren().add(openMergedDialogButton);
 
-        InlineCssTextArea inlineCssTextArea = new InlineCssTextArea(
-                "Hello World How Are You doing!"
-        );
-        inlineCssTextArea.setEditable(false);
-
-        AnchorPane root2 = new AnchorPane();
-        root2.getChildren().add(inlineCssTextArea);
-
-        Scene scene = new Scene(root2, 800, 600);
+        Scene scene = new Scene(root, 800, 600);
         scene.getStylesheets().add("/App.css");
 
         stage.setTitle("Hello!");
