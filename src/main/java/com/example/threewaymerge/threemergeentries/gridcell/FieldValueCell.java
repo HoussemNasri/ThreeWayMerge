@@ -70,7 +70,7 @@ public class FieldValueCell extends AbstractFieldCell {
             FieldValueCell.this.fireEvent(e.copyFor(e.getSource(), FieldValueCell.this));
         });
 
-        InputMap<Event> preventSelectionOrRightArrowNavigation = InputMap.consume(
+        InputMap<Event> preventSelection = InputMap.consume(
                 anyOf(
                         // prevent selection via mouse events
                         eventType(MouseEvent.MOUSE_DRAGGED),
@@ -79,7 +79,7 @@ public class FieldValueCell extends AbstractFieldCell {
                         mousePressed().unless(e -> e.getClickCount() == 1)
                 )
         );
-        Nodes.addInputMap(textLabel, preventSelectionOrRightArrowNavigation);
+        Nodes.addInputMap(textLabel, preventSelection);
 
         textLabel.setStyle("-fx-background-color: #0000;-fx-cursor: hand");
 
