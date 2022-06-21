@@ -6,7 +6,7 @@
 
 }
 
-.styled-text-area:read-only {
+.text-area-class {
     -fx-cursor: hand;
 }
 
